@@ -1,0 +1,23 @@
+INSERT INTO Employee (e_no,emp_name,e_address,e_ph_no,dept_no,dept_name,job_id,salary) VALUES (1,'JAI','GNT',9912681111,10,'CSE',106,9999);
+INSERT INTO Employee (e_no,emp_name,e_address,e_ph_no,dept_no,dept_name,job_id,salary) VALUES (2,'BHANU','VJA',9912681171,20,'CSM',142,9999);
+INSERT INTO Employee (e_no,emp_name,e_address,e_ph_no,dept_no,dept_name,job_id,salary) VALUES (3,'KIRAN','GNT',9912681611,30,'CCE',106,999);
+INSERT INTO Employee (e_no,emp_name,e_address,e_ph_no,dept_no,dept_name,job_id,salary) VALUES (&e_no,'&emp_name','&e_address',&e_ph_no,&dept_no,'&dept_name',&job_id,&salary);
+SELECT * FROM Employee;
+SELECT *  FROM Employee Where dept_no = 10;
+UPDATE Employee SET e_address = 'GNT' WHERE e_no = 4;
+UPDATE Employee SET emp_name='BHANU' WHERE dept_name ='CSM';
+DELETE FROM Employee WHERE e_no = 4;
+UPDATE Employee SET e_no = 5,emp_name='UJVAL' WHERE job_id = 142;
+UPDATE Employee SET job_id = 101 WHERE emp_name ='JRC';
+SELECT * FROM Employee WHERE dept_name='CSE';
+ALTER TABLE Employee add(Email_id VARCHAR2(9));
+ALTER TABLE Employee MODIFY (Email_id VARCHAR(20));
+INSERT INTO Employee (Email_id) VALUES ('jai@3gmail.com');
+DELETE FROM Employee  WHERE Email_id = 'jai@3gmail.com';
+UPDATE Employee SET Email_id = 'jai@3gmail.com' WHERE e_no = 1;
+UPDATE Employee SET Email_id = 'bhanu@3gmail.com' WHERE e_no = 2;
+UPDATE Employee SET Email_id = 'kiran@3gmail.com' WHERE e_no = 3;
+UPDATE Employee SET Email_id = 'jrc@3gmail.com' WHERE e_no = 4;
+UPDATE Employee SET Email_id = 'ujval@3gmail.com' WHERE e_no = 5;
+DELETE FROM Employee  WHERE Email_id = 'jai@3gmail.com';
+
